@@ -1,7 +1,6 @@
 # Salon Queue Management System
 
 **Live demo:** https://curious-kitsune-b15732.netlify.app/
-**Staff Screens Test PIN:** `1234` *(also includes a 1-tap "Demo Unlock" button on the PIN modal)*
 **Hosted on:** Netlify (Frontend SPA with real-time cross-tab BroadcastChannel + localStorage sync)
 
 ## About
