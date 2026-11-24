@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon Queue Management System — Submission Overview</title>
+  <style>
+    :root {
+      --bg-dark: #111827;
+      --card-bg: #1F2937;
+      --border: #374151;
+      --gold: #D4A017;
+      --gold-light: #FBBF24;
+      --text-main: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --emerald: #10B981;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #1F2937 0%, #0F172A 100%);
+      border: 1px solid rgba(212, 160, 23, 0.4);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.25rem;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--gold);
+      color: #111827;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 0.7rem 1.35rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+    .btn-primary:hover {
+      background-color: var(--gold-light);
+    }
+    .pin-box {
+      background: #111827;
+      border: 1px solid var(--border);
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+    .pin-box strong {
+      color: var(--gold-light);
+      letter-spacing: 0.1em;
+    }
+    section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 0.9rem;
+      color: #E5E7EB;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.9rem;
+    }
+    .screen-card {
+      background: #111827;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .screen-card a {
+      color: var(--gold-light);
+      font-weight: 700;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+    .screen-card a:hover {
+      text-decoration: underline;
+    }
+    .screen-card span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .prompt-item {
+      background: #111827;
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.9rem;
+    }
+    .prompt-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+    .prompt-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.83rem;
+      color: #D1D5DB;
+      background: #0B0F19;
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 0.4rem;
+    }
+    .prompt-note {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Live Deployment Ready</div>
+      <h1>Salon Queue Management System</h1>
+      <p class="subtitle">
+        Bilingual (English &amp; Gujarati) real-time salon queue web application built with React, Vite, Tailwind CSS, and cross-tab BroadcastChannel sync.
+      </p>
+      <div class="cta-group">
+        <a class="btn-primary" href="https://curious-kitsune-b15732.netlify.app/" target="_blank" rel="noopener noreferrer">
+          Open Live App &rarr;
+        </a>
+        <div class="pin-box">
+          Staff Screens PIN: <strong>1234</strong>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>All 7 Application Screens</h2>
+      <div class="grid">
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/" target="_blank">1. Home (/)</a>
+          <span>Live waiting count, estimated wait time, barber status chips, and token lookup.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/join" target="_blank">2. Join Queue (/join)</a>
+          <span>10-digit phone validation, max 3 services, barber preference, and live price/time summary.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/status/q-4" target="_blank">3. My Status (/status/:id)</a>
+          <span>Live position countdown, "Start coming" banner at #2, and full-screen gold turn alert.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/reception" target="_blank">4. Reception (/reception)</a>
+          <span>Chair management ([Call next]), walk-in modal, &gt;60m amber highlight, and no-show controls.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/barber/Ravi" target="_blank">5. Barber View (/barber/:name)</a>
+          <span>Per-barber [Start] / [Done] chair workflow, live timer, next-in-line preview, and break toggle.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/display" target="_blank">6. Waiting Area TV (/display)</a>
+          <span>High-contrast 5-metre display showing NOW SERVING chairs, UP NEXT top 5, and audio chime.</span>
+        </div>
+        <div class="screen-card">
+          <a href="https://curious-kitsune-b15732.netlify.app/admin" target="_blank">7. Owner Settings (/admin)</a>
+          <span>Daily KPI stats, online queue Open/Closed toggle, barber duty switches, and service catalog.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ordered Prompts Log</h2>
+
+      <div class="prompt-item">
+        <div class="prompt-title">1. Initial Broad Prompt (Discarded)</div>
+        <div class="prompt-text">Make a salon queue management app with customer booking, reception dashboard, barber screen, TV screen, and owner admin panel in React.</div>
+        <p class="prompt-note">Outcome: Too vague—the agent invented layouts and missed Gujarati labels. Replaced by writing AGENTS.md and docs/ first.</p>
+      </div>
+
+      <div class="prompt-item">
+        <div class="prompt-title">2. Specification Analysis &amp; Project Scaffold</div>
+        <div class="prompt-text">Read AGENTS.md and all files in docs/. Summarize the app in 8 bullets and confirm queue rules. Set up React + Vite + Tailwind CSS with routes for all 7 screens, dark charcoal + gold theme, and EN/GU toggle.</div>
+        <p class="prompt-note">Outcome: Cleanly scaffolded all routes, theme colors (#1F2937 &amp; #D4A017), and bilingual dictionary.</p>
+      </div>
+
+      <div class="prompt-item">
+        <div class="prompt-title">3. Core Queue Engine &amp; Real-Time Sync</div>
+        <div class="prompt-text">Implement src/lib/queueEngine.js strictly following docs/03-flows-rules.md with forward-only statuses, barber preference matching, wait formula, 1-spot-per-phone rule, and localStorage + BroadcastChannel sync.</div>
+        <p class="prompt-note">Outcome: Enabled instant cross-tab synchronization across mobile, tablet, and TV views.</p>
+      </div>
+
+      <div class="prompt-item">
+        <div class="prompt-title">4. Customer, Staff, TV &amp; Owner Screens</div>
+        <div class="prompt-text">Build Screens 1–7 per docs/02-screens.md including circular countdown, full-screen gold "It's your turn!" alert, Reception tablet layout, Barber timer, 5m TV display, and Owner admin controls with PIN 1234.</div>
+        <p class="prompt-note">Outcome: Completed all 7 screens with responsive mobile and tablet layouts.</p>
+      </div>
+
+      <div class="prompt-item">
+        <div class="prompt-title">5. Bug Fix &amp; Deployment Verification</div>
+        <div class="prompt-text">Verify barber preference isolation in Call next, recalculate wait times when a barber goes on break, and configure SPA fallback routing for Netlify/Vercel deployment.</div>
+        <p class="prompt-note">Outcome: Passed all 10 checklist items and deployed live to Netlify.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Half-Page Reflection: Debugging &amp; Iteration</h2>
+      <p>
+        During the initial build of the Salon Queue Management System, one key issue the AI agent got wrong was <strong>barber-preference isolation and wait-time recalculation</strong> during the <code>Call next</code> workflow. In an early pass, the agent treated <code>Call next</code> as a simple First-In-First-Out (FIFO) pop from the front of the queue, which meant clicking <code>Call next</code> for Barber Amit could mistakenly assign a customer who had explicitly requested Barber Ravi. Additionally, when a barber was toggled to <code>On break</code>, the estimated wait time did not immediately adjust because the divisor still counted all on-duty barbers rather than only available working barbers.
+      </p>
+      <p>
+        I noticed both issues while testing side-by-side browser windows using the verification scenarios in <code>docs/03-flows-rules.md</code>. When I created a test customer locked to Ravi ahead of a customer who chose Any, clicking <code>Call next</code> on Amit pulled the wrong customer, and toggling Imran to <code>On break</code> left the Home screen's estimated wait unchanged.
+      </p>
+      <p>
+        To fix this cleanly, I updated <code>docs/03-flows-rules.md</code> and <code>AGENTS.md</code> to enforce a single-source-of-truth rule (<code>src/lib/queueEngine.js</code>) and explicitly defined both constraints: (1) <code>Call next</code> for barber X must scan in FIFO order for the first waiting entry where <code>preferredBarber === X || preferredBarber === 'Any'</code>, and (2) the wait-time divisor must count only barbers where <code>onDuty &amp;&amp; !onBreak</code>. Re-prompting against the updated specification resolved both bugs across every screen without altering the UI.
+      </p>
+    </section>
+
+    <footer>
+      MScIT Vibe Coding Lab Submission &bull; Salon Queue Management System
+    </footer>
+  </div>
+</body>
+</html>
